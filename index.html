@@ -71,6 +71,71 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-blog5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/16/blog5/" class="article-date">
+  <time class="dt-published" datetime="2022-02-16T09:06:11.000Z" itemprop="datePublished">2022-02-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/02/16/blog5/">java数据类型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="https://img-blog.csdnimg.cn/202101100635387.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JpbmdsZW5neWlyYW4=,size_16,color_FFFFFF,t_70" alt="数据类型"></p>
+<ul>
+<li>java为<strong>强类型语言</strong>，要求按严格要求使用变量，所有变量 都必须先定义，在使用。运行慢，但安全。</li>
+<li><strong>弱类型语言</strong>则相反，没有严格的要求限制使用变量。运行快，但不太安全。<h2 id="八大基本数据类型"><a href="#八大基本数据类型" class="headerlink" title="八大基本数据类型"></a>八大基本数据类型</h2><h6 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h6><ul>
+<li>int a1 &#x3D; 10;</li>
+<li>byte a2 &#x3D; 20;</li>
+<li>short a3 &#x3D; 30;</li>
+<li>long a4 &#x3D;40L;<h6 id="小数（浮点数）"><a href="#小数（浮点数）" class="headerlink" title="小数（浮点数）"></a>小数（浮点数）</h6></li>
+<li>float a5 &#x3D; 1.25F;</li>
+<li>double a6 &#x3D; 2.354;<br>   浮点数只能表示有限的位数，位数大的二进制没有对应精确的值表示，会取最接近的数表示。<br>   所以<strong>最好要完全避免使用浮点数进行比较</strong>   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">float</span> <span class="variable">a1</span> <span class="operator">=</span> <span class="number">0.1f</span>;<span class="comment">//0.1</span></span><br><span class="line"><span class="type">double</span> <span class="variable">a2</span> <span class="operator">=</span> <span class="number">1.0</span>/<span class="number">10</span>;<span class="comment">//0.1</span></span><br><span class="line"><span class="type">float</span> <span class="variable">a3</span> <span class="operator">=</span> <span class="number">1234567899</span>;</span><br><span class="line"><span class="type">float</span> <span class="variable">a4</span> <span class="operator">=</span> a3+<span class="number">1</span>;</span><br><span class="line">System.out.println(a1\==a2);<span class="comment">//false  相同的数比较起来不相等</span></span><br><span class="line">System.out.println(a3\==a4);<span class="comment">//true   不同的数比较起来相等</span></span><br></pre></td></tr></table></figure>
+<h6 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h6></li>
+<li>char a7 &#x3D; ‘a’  单字符（字符串 String 属于类）  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> <span class="variable">b</span> <span class="operator">=</span> <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line"><span class="type">char</span> <span class="variable">c</span> <span class="operator">=</span><span class="string">&#x27;\u0061&#x27;</span>;<span class="comment">//&#x27;a&#x27;的Unicode编码号</span></span><br><span class="line">System.out.println((<span class="type">int</span>)b);<span class="comment">// 输出‘a’的ascall码 97</span></span><br><span class="line">System.out.println((<span class="type">int</span>)c);<span class="comment">// 输出‘a’的ascall码 97</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">s1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">      <span class="type">String</span> <span class="variable">s2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">      <span class="comment">//存储在不同的地址s1,s2上</span></span><br><span class="line">      <span class="type">String</span> <span class="variable">s3</span> <span class="operator">=</span> <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">      <span class="type">String</span> <span class="variable">s4</span> <span class="operator">=</span> <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">      <span class="comment">//存储在同一个常量池</span></span><br><span class="line">      System.out.println(s1==s2);<span class="comment">//false</span></span><br><span class="line">      System.out.println(s3==s4);<span class="comment">//true  ”==“ 比较的是地址</span></span><br></pre></td></tr></table></figure>
+<h6 id="布尔类型"><a href="#布尔类型" class="headerlink" title="布尔类型"></a>布尔类型</h6></li>
+<li>boolean flag &#x3D; true;<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(flag==<span class="literal">true</span>)&#123;&#125;<span class="comment">//新手</span></span><br><span class="line"><span class="keyword">if</span>(flag)&#123;&#125;<span class="comment">//两者相同</span></span><br></pre></td></tr></table></figure>
+<h2 id="常用进制"><a href="#常用进制" class="headerlink" title="常用进制"></a>常用进制</h2><ul>
+<li>二进制     int a1 &#x3D; 0b10; 输出2</li>
+<li>八进制     int a2 &#x3D; 010;  输出8</li>
+<li>十进制     int a3 &#x3D; 10;   输出10</li>
+<li>十六进制   int a4 &#x3D; 0x10; 输出16<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2>  java是强类型语言，不同类型变量计算时要进行类型转换。</li>
+</ul>
+</li>
+<li>强制转换<br>  （类型） 变量名 高–&gt;低</li>
+<li>自动转换<br>  低–&gt;高<br>  注意：不要溢出变量类型的取值范围</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/02/16/blog5/" data-id="ckzpgnjip00006s9udkm6006r" data-title="java数据类型" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-blog4" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/02/15/blog4/" class="article-date">
@@ -95,7 +160,9 @@
       
         <h2 id="JDK-Java-Development-Kit"><a href="#JDK-Java-Development-Kit" class="headerlink" title="JDK : Java Development Kit"></a>JDK : Java Development Kit</h2><p>（java开发工具包）</p>
 <h2 id="JRE-Java-Runtime-Environment"><a href="#JRE-Java-Runtime-Environment" class="headerlink" title="JRE : Java Runtime Environment"></a>JRE : Java Runtime Environment</h2><p>（java运行时环境）</p>
-<h2 id="JVM-JAVA-Virtual-Machine"><a href="#JVM-JAVA-Virtual-Machine" class="headerlink" title="JVM : JAVA Virtual Machine"></a>JVM : JAVA Virtual Machine</h2><p>（java虚拟机）</p>
+<h2 id="JVM-JAVA-Virtual-Machine"><a href="#JVM-JAVA-Virtual-Machine" class="headerlink" title="JVM : JAVA Virtual Machine"></a>JVM : JAVA Virtual Machine</h2><p>（java虚拟机）<br><img src="https://img0.baidu.com/it/u=22924168,245713909&fm=253&fmt=auto&app=138&f=PNG?w=654&h=267" alt="三者关系"></p>
+<h2 id="卸载jdk步骤"><a href="#卸载jdk步骤" class="headerlink" title="卸载jdk步骤"></a>卸载jdk步骤</h2><p>1.删除java安装目录<br>2.删除环境变量中JAVA_HOME<br>3.删除path下java目录<br>4.java-version</p>
+<h2 id="下载jdk及配置"><a href="#下载jdk及配置" class="headerlink" title="下载jdk及配置"></a>下载jdk及配置</h2><p>1.官网下载1.8安装包<br>2.配置环境变量 系统变量JAVA_HOME、目录<br>3.配置path变量<br>4.在cmd输入 java -version查看是否下载成功</p>
 
       
     </div>
@@ -373,6 +440,10 @@
       <ul>
         
           <li>
+            <a href="/2022/02/16/blog5/">java数据类型</a>
+          </li>
+        
+          <li>
             <a href="/2022/02/15/blog4/">JDK、JRE、JVM</a>
           </li>
         
@@ -386,10 +457,6 @@
         
           <li>
             <a href="/2022/02/10/first-blog/">first blog</a>
-          </li>
-        
-          <li>
-            <a href="/2022/02/05/hello-world/">Hello World</a>
           </li>
         
       </ul>

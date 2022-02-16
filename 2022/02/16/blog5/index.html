@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>java数据类型 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="java为强类型语言，要求按严格要求使用变量，所有变量 都必须先定义，在使用。运行慢，但安全。 弱类型语言则相反，没有严格的要求限制使用变量。运行快，但不太安全。八大基本数据类型整数 int a1 &#x3D; 10; byte a2 &#x3D; 20; short a3 &#x3D; 30; long a4 &#x3D;40L;小数（浮点数） float a5 &#x3D; 1.25F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java数据类型">
+<meta property="og:url" content="http://example.com/2022/02/16/blog5/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="java为强类型语言，要求按严格要求使用变量，所有变量 都必须先定义，在使用。运行慢，但安全。 弱类型语言则相反，没有严格的要求限制使用变量。运行快，但不太安全。八大基本数据类型整数 int a1 &#x3D; 10; byte a2 &#x3D; 20; short a3 &#x3D; 30; long a4 &#x3D;40L;小数（浮点数） float a5 &#x3D; 1.25F;">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/202101100635387.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JpbmdsZW5neWlyYW4=,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2022-02-16T09:06:11.000Z">
+<meta property="article:modified_time" content="2022-02-16T11:15:43.116Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/202101100635387.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JpbmdsZW5neWlyYW4=,size_16,color_FFFFFF,t_70">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-blog5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/16/blog5/" class="article-date">
+  <time class="dt-published" datetime="2022-02-16T09:06:11.000Z" itemprop="datePublished">2022-02-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      java数据类型
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="https://img-blog.csdnimg.cn/202101100635387.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JpbmdsZW5neWlyYW4=,size_16,color_FFFFFF,t_70" alt="数据类型"></p>
+<ul>
+<li>java为<strong>强类型语言</strong>，要求按严格要求使用变量，所有变量 都必须先定义，在使用。运行慢，但安全。</li>
+<li><strong>弱类型语言</strong>则相反，没有严格的要求限制使用变量。运行快，但不太安全。<h2 id="八大基本数据类型"><a href="#八大基本数据类型" class="headerlink" title="八大基本数据类型"></a>八大基本数据类型</h2><h6 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h6><ul>
+<li>int a1 &#x3D; 10;</li>
+<li>byte a2 &#x3D; 20;</li>
+<li>short a3 &#x3D; 30;</li>
+<li>long a4 &#x3D;40L;<h6 id="小数（浮点数）"><a href="#小数（浮点数）" class="headerlink" title="小数（浮点数）"></a>小数（浮点数）</h6></li>
+<li>float a5 &#x3D; 1.25F;</li>
+<li>double a6 &#x3D; 2.354;<br>   浮点数只能表示有限的位数，位数大的二进制没有对应精确的值表示，会取最接近的数表示。<br>   所以<strong>最好要完全避免使用浮点数进行比较</strong>   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">float</span> <span class="variable">a1</span> <span class="operator">=</span> <span class="number">0.1f</span>;<span class="comment">//0.1</span></span><br><span class="line"><span class="type">double</span> <span class="variable">a2</span> <span class="operator">=</span> <span class="number">1.0</span>/<span class="number">10</span>;<span class="comment">//0.1</span></span><br><span class="line"><span class="type">float</span> <span class="variable">a3</span> <span class="operator">=</span> <span class="number">1234567899</span>;</span><br><span class="line"><span class="type">float</span> <span class="variable">a4</span> <span class="operator">=</span> a3+<span class="number">1</span>;</span><br><span class="line">System.out.println(a1\==a2);<span class="comment">//false  相同的数比较起来不相等</span></span><br><span class="line">System.out.println(a3\==a4);<span class="comment">//true   不同的数比较起来相等</span></span><br></pre></td></tr></table></figure>
+<h6 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h6></li>
+<li>char a7 &#x3D; ‘a’  单字符（字符串 String 属于类）  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> <span class="variable">b</span> <span class="operator">=</span> <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line"><span class="type">char</span> <span class="variable">c</span> <span class="operator">=</span><span class="string">&#x27;\u0061&#x27;</span>;<span class="comment">//&#x27;a&#x27;的Unicode编码号</span></span><br><span class="line">System.out.println((<span class="type">int</span>)b);<span class="comment">// 输出‘a’的ascall码 97</span></span><br><span class="line">System.out.println((<span class="type">int</span>)c);<span class="comment">// 输出‘a’的ascall码 97</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">s1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">      <span class="type">String</span> <span class="variable">s2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">      <span class="comment">//存储在不同的地址s1,s2上</span></span><br><span class="line">      <span class="type">String</span> <span class="variable">s3</span> <span class="operator">=</span> <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">      <span class="type">String</span> <span class="variable">s4</span> <span class="operator">=</span> <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">      <span class="comment">//存储在同一个常量池</span></span><br><span class="line">      System.out.println(s1==s2);<span class="comment">//false</span></span><br><span class="line">      System.out.println(s3==s4);<span class="comment">//true  ”==“ 比较的是地址</span></span><br></pre></td></tr></table></figure>
+<h6 id="布尔类型"><a href="#布尔类型" class="headerlink" title="布尔类型"></a>布尔类型</h6></li>
+<li>boolean flag &#x3D; true;<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(flag==<span class="literal">true</span>)&#123;&#125;<span class="comment">//新手</span></span><br><span class="line"><span class="keyword">if</span>(flag)&#123;&#125;<span class="comment">//两者相同</span></span><br></pre></td></tr></table></figure>
+<h2 id="常用进制"><a href="#常用进制" class="headerlink" title="常用进制"></a>常用进制</h2><ul>
+<li>二进制     int a1 &#x3D; 0b10; 输出2</li>
+<li>八进制     int a2 &#x3D; 010;  输出8</li>
+<li>十进制     int a3 &#x3D; 10;   输出10</li>
+<li>十六进制   int a4 &#x3D; 0x10; 输出16<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2>  java是强类型语言，不同类型变量计算时要进行类型转换。</li>
+</ul>
+</li>
+<li>强制转换<br>  （类型） 变量名 高–&gt;低</li>
+<li>自动转换<br>  低–&gt;高<br>  注意：不要溢出变量类型的取值范围</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/02/16/blog5/" data-id="ckzpgnjip00006s9udkm6006r" data-title="java数据类型" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/02/15/blog4/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">JDK、JRE、JVM</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/02/16/blog5/">java数据类型</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/15/blog4/">JDK、JRE、JVM</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/12/blog3/">Windows命令</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/12/blog2/">Markdown语法</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/10/first-blog/">first blog</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
