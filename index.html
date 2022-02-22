@@ -71,6 +71,287 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-blog10" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/18/blog10/" class="article-date">
+  <time class="dt-published" datetime="2022-02-18T06:59:24.000Z" itemprop="datePublished">2022-02-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/02/18/blog10/">方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>修饰符 返回值类型 方法名（参数类型 参数名）<br>    *<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40574571/article/details/90765349">值传递与引用传递的区别</a></p>
+<h3 id="方法重载"><a href="#方法重载" class="headerlink" title="方法重载"></a>方法重载</h3><ul>
+<li>1.方法名必须相同</li>
+<li>2.参数的参数<strong>类型</strong>、参数<strong>个数</strong>或参数<strong>顺序（同方法内的不同参数类型</strong>）必须不同<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> String <span class="title function_">test</span><span class="params">(<span class="type">int</span>, String)</span>&#123;&#125;</span><br><span class="line"><span class="comment">//方法重载</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">test</span><span class="params">(String <span class="type">int</span>)</span>&#123;&#125;</span><br></pre></td></tr></table></figure></li>
+<li>3.返回类型、修饰符可以相同、也可以不同</li>
+<li>4.仅有返回值不同不足以区分两个方法体<h3 id="可变参数（不定向参数）"><a href="#可变参数（不定向参数）" class="headerlink" title="可变参数（不定向参数）"></a>可变参数（不定向参数）</h3></li>
+<li>JDK 1.5开始，java支持传递同类型的可变参数</li>
+<li>在方法声明中，在指定参数类型后加一个省略号“…”</li>
+<li><strong>一个方法中只能制定一个可变参数，他必须是方法的最后一个参数</strong>。任何普通的参数必须在它之前声明。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">printmax(<span class="number">1</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">4</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">printmax</span><span class="params">(<span class="type">int</span>... x)</span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i&lt; x.length;i++)&#123;</span><br><span class="line">            System.out.println(x[i]);<span class="comment">//用[]取可变长变量的具体值</span></span><br><span class="line">        &#125;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3></li>
+<li>递归头：什么时候不调用自己</li>
+<li>递归体：什么时候调用自身<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//递归尽量不用</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">f</span><span class="params">(<span class="type">int</span> x)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (x == <span class="number">1</span>)&#123;<span class="comment">// 递归头，边界条件，什么时候不调用自身</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> x*f(x-<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/02/18/blog10/" data-id="ckzy6zxw90000sc9u45s02mjf" data-title="方法" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-blog9" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/18/blog9/" class="article-date">
+  <time class="dt-published" datetime="2022-02-18T06:59:08.000Z" itemprop="datePublished">2022-02-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/02/18/blog9/">blog9</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Scanner"><a href="#Scanner" class="headerlink" title="Scanner"></a>Scanner</h1><ul>
+<li><strong>next()</strong>:<ul>
+<li>读取有效字符后才结束输出。</li>
+<li>不能得到带有空格的字符串。</li>
+</ul>
+</li>
+<li><strong>nextLine()</strong>:<ul>
+<li>以Enter作为结束符，返回回车之前所有字符。</li>
+<li>可以获得空格字符。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//next()</span></span><br><span class="line"><span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);<span class="comment">//创建扫描器对象，接收键盘数据</span></span><br><span class="line">      System.out.println(<span class="string">&quot;输入字符串&quot;</span>);</span><br><span class="line">      <span class="keyword">if</span> (scanner.hasNext())&#123;<span class="comment">//用next接受字符串</span></span><br><span class="line">          <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> scanner.next();</span><br><span class="line">          System.out.println(str);</span><br><span class="line">      &#125;</span><br><span class="line">scanner.close();<span class="comment">//io流的类用完一定要关掉，会占用资源。</span></span><br><span class="line"></span><br><span class="line">     <span class="comment">//nextLine()</span></span><br><span class="line">      <span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in); <span class="comment">//创建一个扫描器对象</span></span><br><span class="line">      System.out.println(<span class="string">&quot;输入字符串&quot;</span>);</span><br><span class="line">      <span class="comment">//判断是否还有输入</span></span><br><span class="line">      <span class="keyword">if</span> (scanner.hasNextLine())&#123;</span><br><span class="line">          <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> scanner.nextLine();</span><br><span class="line">          System.out.println(str);</span><br><span class="line">	scanner.close();</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><strong>nextInt()</strong>:<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        System.out.println(<span class="string">&quot;输入整数：&quot;</span>);</span><br><span class="line">        <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (scanner.hasNextInt())&#123;</span><br><span class="line">            a = scanner.nextInt();<span class="comment">//获取整数</span></span><br><span class="line">            System.out.println(<span class="string">&quot;整数为：&quot;</span>+a);</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;非整数&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        scanner.close();</span><br></pre></td></tr></table></figure>
+<h1 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h1></li>
+<li><strong>swich()</strong>;<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;梅&quot;</span>;</span><br><span class="line">        <span class="keyword">switch</span> (name)&#123;<span class="comment">//jdk 7 以后switch表达式结果可以用String类型。</span></span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;mei&quot;</span>:</span><br><span class="line">                System.out.println(<span class="string">&quot;拼音&quot;</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;梅&quot;</span>:</span><br><span class="line">                System.out.println(<span class="string">&quot;汉字&quot;</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:<span class="comment">//默认</span></span><br><span class="line">                System.out.println(<span class="string">&quot;end&quot;</span>);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></li>
+<li><strong>while()</strong>;<ul>
+<li>不满足条件，直接退出循环。</li>
+</ul>
+</li>
+<li><strong>do。。。while()</strong>;<ul>
+<li>至少会执行一次。</li>
+</ul>
+</li>
+<li><strong>for()</strong>:<ul>
+<li>最灵活的、最有效的循环结构。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//输出0-100的奇数和、偶数和</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">ji</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">ou</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i % <span class="number">2</span> == <span class="number">0</span>)&#123;</span><br><span class="line">                ou+=i;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                ji+=i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;偶数h和等于：&quot;</span>+ou+<span class="string">&quot;\n奇数和等于：&quot;</span>+ji);</span><br><span class="line">		</span><br><span class="line"><span class="comment">//输出1-1000能被5整除的数、每行三个</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">geshu</span> <span class="operator">=</span> <span class="number">3</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">1000</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i%<span class="number">5</span>==<span class="number">0</span>)&#123;</span><br><span class="line">                System.out.print(i+<span class="string">&quot;\t&quot;</span>);</span><br><span class="line">                geshu++;</span><br><span class="line">                <span class="keyword">if</span> (geshu%<span class="number">3</span>==<span class="number">0</span>)&#123;</span><br><span class="line">                    System.out.println(<span class="string">&quot;&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出乘法口诀表</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">1</span>;i &lt;= <span class="number">9</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span> (j = <span class="number">1</span>;j &lt;= i;j++)&#123;</span><br><span class="line">                System.out.print(i+<span class="string">&quot;x&quot;</span>+j+<span class="string">&quot;=&quot;</span>+i*j+<span class="string">&quot; &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(<span class="string">&quot;&quot;</span>);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><strong>增强for(声明语句:表达式)</strong>;<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//加强for循环</span></span><br><span class="line">        <span class="type">int</span>[] a = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> x:a)&#123;</span><br><span class="line">            System.out.print(x);<span class="comment">//输出:1 2 3 4 5</span></span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></li>
+<li><strong>break</strong> 强制终止当前循环，不执行循环剩余语句</li>
+<li><strong>continue</strong> 跳过本次循环，进入下一次循环<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//打印三角形</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt;= <span class="number">5</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">5</span>; j &gt;= i; j--)&#123;<span class="comment">//打印空白三角形</span></span><br><span class="line">                System.out.print(<span class="string">&quot; &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">1</span>; j &lt;= i; j++)&#123;<span class="comment">//打印左半边阴影三角形</span></span><br><span class="line">                System.out.print(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">2</span>; j &lt;= i; j++)&#123;<span class="comment">//打印右半边阴影三角形</span></span><br><span class="line">                System.out.print(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"><span class="comment">//     * </span></span><br><span class="line"><span class="comment">//    *** </span></span><br><span class="line"><span class="comment">//   ***** </span></span><br><span class="line"><span class="comment">//  ******* </span></span><br><span class="line"><span class="comment">// ********* </span></span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/02/18/blog9/" data-id="ckzy6zxwk0003sc9u2yzj8eya" data-title="blog9" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-blog8" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/18/blog8/" class="article-date">
+  <time class="dt-published" datetime="2022-02-18T06:58:26.000Z" itemprop="datePublished">2022-02-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/02/18/blog8/">包、JavaDoc</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="命名包"><a href="#命名包" class="headerlink" title="命名包"></a>命名包</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> pkg;</span><br></pre></td></tr></table></figure>
+<p>(<strong>一般用公司域名倒置作为包名</strong>，如 <a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a> 包名为 package com.baidu.www)</p>
+<h4 id="导入包"><a href="#导入包" class="headerlink" title="导入包"></a>导入包</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> package1.package2;</span><br></pre></td></tr></table></figure>
+<h4 id="JavaDoc"><a href="#JavaDoc" class="headerlink" title="JavaDoc"></a>JavaDoc</h4><p>JavaDoc命令是用来声称自己API文档的<br>@author 作者<br>@version 版本号<br>@since 最早使用的jdk版本<br>@param 参数名<br>@return 返回值情况<br>@throws 异常抛出情况</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.mei;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> mei</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.8</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@since</span> 1.8</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">base</span> &#123;</span><br><span class="line">    String name;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> name</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> Exception</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">test</span> <span class="params">(String name)</span> <span class="keyword">throws</span> Exception&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>打开帮助文档</strong></p>
+<ul>
+<li>在文件夹中打开该java程序目录，在该目录用命令行打开，输入命令<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javadoc -encoding UTF-8 -charset UTF-8 </span><br></pre></td></tr></table></figure></li>
+<li>打开文件夹内的index.html</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/02/18/blog8/" data-id="ckzy6zxwl0004sc9u7ehf7vji" data-title="包、JavaDoc" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-blog7" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/17/blog7/" class="article-date">
+  <time class="dt-published" datetime="2022-02-17T07:31:36.000Z" itemprop="datePublished">2022-02-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/02/17/blog7/">运算符</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h1><p>位运算用二进制计算，效率高。</p>
+<ul>
+<li>a &#x3D; 0011 1100</li>
+<li>b &#x3D; 0000 1101</li>
+<li>a&amp;b &#x3D; 0000 1100</li>
+<li>a|b &#x3D; 0011 1101</li>
+<li>a^b &#x3D; 0011 0001</li>
+<li>~a &#x3D; 1100 0011</li>
+</ul>
+<blockquote>
+<p>2*8 计算机如何运算效率最高？</p>
+</blockquote>
+<ul>
+<li>&lt;&lt; 左移 相当于*2（二进制运算）</li>
+<li>&gt;&gt; 右移 相当于&#x2F;2<blockquote>
+<p>2*2*2*2 左移四位即可</p>
+</blockquote>
+<h1 id="扩展赋值运算符"><a href="#扩展赋值运算符" class="headerlink" title="扩展赋值运算符"></a>扩展赋值运算符</h1></li>
+<li>a+&#x3D;b &#x2F;&#x2F;a&#x3D;a+b</li>
+<li>a-&#x3D;b &#x2F;&#x2F;a&#x3D;a-b<h1 id="条件运算符"><a href="#条件运算符" class="headerlink" title="条件运算符"></a>条件运算符</h1></li>
+<li><strong>x ? y : z &#x2F;&#x2F;如果x为真，结果为y，否则为z。(重要)</strong><h2 id="x3D-x3D-注意：多用（）减少bug-F44336-x3D-x3D"><a href="#x3D-x3D-注意：多用（）减少bug-F44336-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;注意：多用（）减少bug #F44336&#x3D;&#x3D;"></a>&#x3D;&#x3D;注意：多用（）减少bug #F44336&#x3D;&#x3D;</h2></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/02/17/blog7/" data-id="ckzy6zxwj0002sc9u9zud1re1" data-title="运算符" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-blog6" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/17/blog6/" class="article-date">
+  <time class="dt-published" datetime="2022-02-17T07:03:26.000Z" itemprop="datePublished">2022-02-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/02/17/blog6/">blog6</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">type</span> <span class="variable">varName</span> <span class="operator">=</span> value</span><br><span class="line"><span class="comment">//数据类型 变量名 = 值</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>数据类型有<strong>基本类型</strong>和<strong>引用类型</strong></li>
+<li>变量名必须合法，不能用关键字，只能以_，$和字母开头<h1 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> 常量名 = 值 <span class="comment">//可以增加static等语句</span></span><br></pre></td></tr></table></figure>
+<h1 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h1></li>
+<li><strong>局部变量</strong>：必须声明和初始化值</li>
+<li><strong>实例变量</strong>：从属于变量，如果不进行初始化，这个值默认为0或0.0<br>注意：</li>
+</ul>
+<p>1.Boolean值默认为false也就是0<br>2.除了基本类型，其余类型默认值都为null</p>
+<h1 id="变量的命名规范"><a href="#变量的命名规范" class="headerlink" title="变量的命名规范"></a>变量的命名规范</h1><ul>
+<li><strong>类成员变量</strong>：首字母小写和驼峰原则（除了第一个单词外后面单词首字母大写 varName）</li>
+<li><strong>局部变量</strong>：首字母小写和驼峰原则</li>
+<li><strong>常量</strong>：大写字母和下划线</li>
+<li><strong>类名</strong>：首字母<strong>大</strong>写和驼峰原则</li>
+<li><strong>方法名</strong>：首字母小写和驼峰原则</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/02/17/blog6/" data-id="ckzy6zxwg0001sc9ugzpsecsm" data-title="blog6" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-blog5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/02/16/blog5/" class="article-date">
@@ -358,58 +639,12 @@
 
 
   
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/02/05/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2022-02-05T10:27:58.348Z" itemprop="datePublished">2022-02-05</time>
-</a>
+
+
+  <nav id="page-nav">
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/02/05/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/05/hello-world/" data-id="ckz9p9keo0000yw9ubd9z8wya" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+  </nav>
 
 </section>
         
@@ -440,23 +675,23 @@
       <ul>
         
           <li>
-            <a href="/2022/02/16/blog5/">java数据类型</a>
+            <a href="/2022/02/18/blog10/">方法</a>
           </li>
         
           <li>
-            <a href="/2022/02/15/blog4/">JDK、JRE、JVM</a>
+            <a href="/2022/02/18/blog9/">blog9</a>
           </li>
         
           <li>
-            <a href="/2022/02/12/blog3/">Windows命令</a>
+            <a href="/2022/02/18/blog8/">包、JavaDoc</a>
           </li>
         
           <li>
-            <a href="/2022/02/12/blog2/">Markdown语法</a>
+            <a href="/2022/02/17/blog7/">运算符</a>
           </li>
         
           <li>
-            <a href="/2022/02/10/first-blog/">first blog</a>
+            <a href="/2022/02/17/blog6/">blog6</a>
           </li>
         
       </ul>

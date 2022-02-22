@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>blog9 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Scanner next(): 读取有效字符后才结束输出。 不能得到带有空格的字符串。   nextLine(): 以Enter作为结束符，返回回车之前所有字符。 可以获得空格字符。1234567891011121314151617&#x2F;&#x2F;next()Scanner scanner &#x3D; new Scanner(System.in);&#x2F;&#x2F;创建扫描器对象，接收键盘数据      System.out.pr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="blog9">
+<meta property="og:url" content="http://example.com/2022/02/18/blog9/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Scanner next(): 读取有效字符后才结束输出。 不能得到带有空格的字符串。   nextLine(): 以Enter作为结束符，返回回车之前所有字符。 可以获得空格字符。1234567891011121314151617&#x2F;&#x2F;next()Scanner scanner &#x3D; new Scanner(System.in);&#x2F;&#x2F;创建扫描器对象，接收键盘数据      System.out.pr">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-02-18T06:59:08.000Z">
+<meta property="article:modified_time" content="2022-02-22T13:56:10.441Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-blog9" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/18/blog9/" class="article-date">
+  <time class="dt-published" datetime="2022-02-18T06:59:08.000Z" itemprop="datePublished">2022-02-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      blog9
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Scanner"><a href="#Scanner" class="headerlink" title="Scanner"></a>Scanner</h1><ul>
+<li><strong>next()</strong>:<ul>
+<li>读取有效字符后才结束输出。</li>
+<li>不能得到带有空格的字符串。</li>
+</ul>
+</li>
+<li><strong>nextLine()</strong>:<ul>
+<li>以Enter作为结束符，返回回车之前所有字符。</li>
+<li>可以获得空格字符。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//next()</span></span><br><span class="line"><span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);<span class="comment">//创建扫描器对象，接收键盘数据</span></span><br><span class="line">      System.out.println(<span class="string">&quot;输入字符串&quot;</span>);</span><br><span class="line">      <span class="keyword">if</span> (scanner.hasNext())&#123;<span class="comment">//用next接受字符串</span></span><br><span class="line">          <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> scanner.next();</span><br><span class="line">          System.out.println(str);</span><br><span class="line">      &#125;</span><br><span class="line">scanner.close();<span class="comment">//io流的类用完一定要关掉，会占用资源。</span></span><br><span class="line"></span><br><span class="line">     <span class="comment">//nextLine()</span></span><br><span class="line">      <span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in); <span class="comment">//创建一个扫描器对象</span></span><br><span class="line">      System.out.println(<span class="string">&quot;输入字符串&quot;</span>);</span><br><span class="line">      <span class="comment">//判断是否还有输入</span></span><br><span class="line">      <span class="keyword">if</span> (scanner.hasNextLine())&#123;</span><br><span class="line">          <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> scanner.nextLine();</span><br><span class="line">          System.out.println(str);</span><br><span class="line">	scanner.close();</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><strong>nextInt()</strong>:<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        System.out.println(<span class="string">&quot;输入整数：&quot;</span>);</span><br><span class="line">        <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (scanner.hasNextInt())&#123;</span><br><span class="line">            a = scanner.nextInt();<span class="comment">//获取整数</span></span><br><span class="line">            System.out.println(<span class="string">&quot;整数为：&quot;</span>+a);</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;非整数&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        scanner.close();</span><br></pre></td></tr></table></figure>
+<h1 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h1></li>
+<li><strong>swich()</strong>;<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;梅&quot;</span>;</span><br><span class="line">        <span class="keyword">switch</span> (name)&#123;<span class="comment">//jdk 7 以后switch表达式结果可以用String类型。</span></span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;mei&quot;</span>:</span><br><span class="line">                System.out.println(<span class="string">&quot;拼音&quot;</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;梅&quot;</span>:</span><br><span class="line">                System.out.println(<span class="string">&quot;汉字&quot;</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:<span class="comment">//默认</span></span><br><span class="line">                System.out.println(<span class="string">&quot;end&quot;</span>);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></li>
+<li><strong>while()</strong>;<ul>
+<li>不满足条件，直接退出循环。</li>
+</ul>
+</li>
+<li><strong>do。。。while()</strong>;<ul>
+<li>至少会执行一次。</li>
+</ul>
+</li>
+<li><strong>for()</strong>:<ul>
+<li>最灵活的、最有效的循环结构。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//输出0-100的奇数和、偶数和</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">ji</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">ou</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i % <span class="number">2</span> == <span class="number">0</span>)&#123;</span><br><span class="line">                ou+=i;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                ji+=i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;偶数h和等于：&quot;</span>+ou+<span class="string">&quot;\n奇数和等于：&quot;</span>+ji);</span><br><span class="line">		</span><br><span class="line"><span class="comment">//输出1-1000能被5整除的数、每行三个</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">geshu</span> <span class="operator">=</span> <span class="number">3</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">1000</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i%<span class="number">5</span>==<span class="number">0</span>)&#123;</span><br><span class="line">                System.out.print(i+<span class="string">&quot;\t&quot;</span>);</span><br><span class="line">                geshu++;</span><br><span class="line">                <span class="keyword">if</span> (geshu%<span class="number">3</span>==<span class="number">0</span>)&#123;</span><br><span class="line">                    System.out.println(<span class="string">&quot;&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出乘法口诀表</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">1</span>;i &lt;= <span class="number">9</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span> (j = <span class="number">1</span>;j &lt;= i;j++)&#123;</span><br><span class="line">                System.out.print(i+<span class="string">&quot;x&quot;</span>+j+<span class="string">&quot;=&quot;</span>+i*j+<span class="string">&quot; &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(<span class="string">&quot;&quot;</span>);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><strong>增强for(声明语句:表达式)</strong>;<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//加强for循环</span></span><br><span class="line">        <span class="type">int</span>[] a = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> x:a)&#123;</span><br><span class="line">            System.out.print(x);<span class="comment">//输出:1 2 3 4 5</span></span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></li>
+<li><strong>break</strong> 强制终止当前循环，不执行循环剩余语句</li>
+<li><strong>continue</strong> 跳过本次循环，进入下一次循环<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//打印三角形</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt;= <span class="number">5</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">5</span>; j &gt;= i; j--)&#123;<span class="comment">//打印空白三角形</span></span><br><span class="line">                System.out.print(<span class="string">&quot; &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">1</span>; j &lt;= i; j++)&#123;<span class="comment">//打印左半边阴影三角形</span></span><br><span class="line">                System.out.print(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">2</span>; j &lt;= i; j++)&#123;<span class="comment">//打印右半边阴影三角形</span></span><br><span class="line">                System.out.print(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"><span class="comment">//     * </span></span><br><span class="line"><span class="comment">//    *** </span></span><br><span class="line"><span class="comment">//   ***** </span></span><br><span class="line"><span class="comment">//  ******* </span></span><br><span class="line"><span class="comment">// ********* </span></span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/02/18/blog9/" data-id="ckzy6zxwk0003sc9u2yzj8eya" data-title="blog9" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/02/18/blog10/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          方法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/02/18/blog8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">包、JavaDoc</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/02/18/blog10/">方法</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/18/blog9/">blog9</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/18/blog8/">包、JavaDoc</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/17/blog7/">运算符</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/17/blog6/">blog6</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
