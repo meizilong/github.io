@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>数组、排序 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="数组 首先要声明变量12dataType[]    arrayRefVar[];&#x2F;&#x2F;首选方法dataType arrayRefVar[];&#x2F;&#x2F;效果相同，不是首选 Java啊需要new操作符来创建数组1dataType[]    arrayRefVar[] &#x3D; new dataType[arraySize]; 获取数组长度：arrays.length内存分析三种初始化 静态初始化12int[] a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数组、排序">
+<meta property="og:url" content="http://example.com/2022/02/24/blog11/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="数组 首先要声明变量12dataType[]    arrayRefVar[];&#x2F;&#x2F;首选方法dataType arrayRefVar[];&#x2F;&#x2F;效果相同，不是首选 Java啊需要new操作符来创建数组1dataType[]    arrayRefVar[] &#x3D; new dataType[arraySize]; 获取数组长度：arrays.length内存分析三种初始化 静态初始化12int[] a">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img0.baidu.com/it/u=2067067443,2244393150&fm=253&fmt=auto&app=138&f=JPG?w=1139&h=500">
+<meta property="og:image" content="https://img1.baidu.com/it/u=1547566237,1129235293&fm=253&fmt=auto&app=138&f=PNG?w=958&h=339">
+<meta property="article:published_time" content="2022-02-24T06:31:19.000Z">
+<meta property="article:modified_time" content="2022-02-26T07:37:23.388Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img0.baidu.com/it/u=2067067443,2244393150&fm=253&fmt=auto&app=138&f=JPG?w=1139&h=500">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-blog11" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/24/blog11/" class="article-date">
+  <time class="dt-published" datetime="2022-02-24T06:31:19.000Z" itemprop="datePublished">2022-02-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      数组、排序
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><ul>
+<li>首先要声明变量<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dataType[]    arrayRefVar[];<span class="comment">//首选方法</span></span><br><span class="line">dataType arrayRefVar[];<span class="comment">//效果相同，不是首选</span></span><br></pre></td></tr></table></figure></li>
+<li>Java啊需要new操作符来创建数组<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataType[]    arrayRefVar[] = <span class="keyword">new</span> <span class="title class_">dataType</span>[arraySize];</span><br></pre></td></tr></table></figure></li>
+<li>获取数组长度：arrays.length<h1 id="内存分析"><a href="#内存分析" class="headerlink" title="内存分析"></a>内存分析</h1><img src="https://img0.baidu.com/it/u=2067067443,2244393150&fm=253&fmt=auto&app=138&f=JPG?w=1139&h=500" alt="java内存"><h1 id="三种初始化"><a href="#三种初始化" class="headerlink" title="三种初始化"></a>三种初始化</h1></li>
+<li>静态初始化<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] a = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line"><span class="type">int</span>[] aa = &#123;<span class="keyword">new</span> <span class="title class_">int</span>(<span class="number">1</span>,<span class="number">1</span>),<span class="keyword">new</span> <span class="title class_">int</span>(<span class="number">2</span>,<span class="number">2</span>)&#125;;</span><br></pre></td></tr></table></figure></li>
+<li>动态初始化<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] a = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">2</span>];</span><br><span class="line">a[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">a[<span class="number">1</span>] = <span class="number">0</span>;</span><br></pre></td></tr></table></figure></li>
+<li>默认初始化(包含于动态初始化)<br>未被赋值的会有各类型的初始值</li>
+</ul>
+<ol>
+<li>数组长度固定，创建后大小不可改变。</li>
+<li>数组内元素必须是相同类型</li>
+<li>数组中元素可以是基本类型或引用类型</li>
+<li>数组可以是对象，数组内每个元素是该对象的成员变量。</li>
+<li>数组元素存放在堆中<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] arr = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">9</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">        <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length; i++) &#123;<span class="comment">//输出数组元素</span></span><br><span class="line">            System.out.println(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">		<span class="comment">//for(int aa:arr[])&#123;   增强for遍历数组</span></span><br><span class="line">        <span class="comment">//  System.out.println(aa);  </span></span><br><span class="line">        <span class="comment">// &#125;</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i &lt; arr.length; i++)&#123; <span class="comment">//输出最大值</span></span><br><span class="line">            <span class="keyword">if</span> (arr[i]&gt;a)&#123;</span><br><span class="line">                a = arr[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;最大值为：&quot;</span>+a);</span><br></pre></td></tr></table></figure>
+<h1 id="Arrays类"><a href="#Arrays类" class="headerlink" title="Arrays类"></a>Arrays类</h1><span id="more"></span>
+java.util.Arrays类中都是static修饰的静态方法，可以直接使用类名调用，不用使用对象调用<br>toString<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] a = &#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">34</span>&#125;;</span><br><span class="line">        System.out.println(a); <span class="comment">//输出哈希值</span></span><br><span class="line">        System.out.println(Arrays.toString(a)); <span class="comment">//Arrays类的toString方法输出完整数组</span></span><br></pre></td></tr></table></figure>
+sort<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Arrays.sort(a); <span class="comment">//自动排序,默认从小到大</span></span><br><span class="line">        System.out.println(Arrays.toString(a));</span><br></pre></td></tr></table></figure>
+fill<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Arrays.fill(a,<span class="number">2</span>,<span class="number">4</span>,<span class="number">3</span>); <span class="comment">//数组填充，用指定值填充指定下标范围内的值</span></span><br><span class="line">        System.out.println(Arrays.toString(a));</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><p>两层循环，外层冒泡轮数，里层依次比较相邻元素，每次至少排好一个当前最小（大）值。这是嵌套循环，时间复杂度为O（n2）。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] a = &#123;<span class="number">67</span>,<span class="number">54</span>,<span class="number">3</span>,<span class="number">56</span>,<span class="number">8</span>,<span class="number">64</span>,<span class="number">35</span>,<span class="number">89</span>,<span class="number">86</span>,<span class="number">64</span>,<span class="number">6</span>,<span class="number">5</span>&#125;;</span><br><span class="line">        <span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i &lt; a.length-<span class="number">1</span>;i++)&#123;<span class="comment">//总排序次数</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>;j &lt; a.length-i-<span class="number">1</span>;j++)&#123;<span class="comment">//相邻元素排序，每次减去一排好的i个元素</span></span><br><span class="line">                <span class="keyword">if</span> (a[j+<span class="number">1</span>]&lt;a[j])&#123;       <span class="comment">//升序</span></span><br><span class="line">                    b = a[j];</span><br><span class="line">                    a[j] = a[j+<span class="number">1</span>];</span><br><span class="line">                    a[j+<span class="number">1</span>] = b;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(Arrays.toString(a));</span><br></pre></td></tr></table></figure>
+<h1 id="稀疏数组"><a href="#稀疏数组" class="headerlink" title="稀疏数组"></a>稀疏数组</h1><p><img src="https://img1.baidu.com/it/u=1547566237,1129235293&fm=253&fmt=auto&app=138&f=PNG?w=958&h=339" alt="稀疏数组"><br>存储数组数据时有大量无效数据，这是可以用稀疏数组压缩节省资源。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo4</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"><span class="comment">//稀疏数组</span></span><br><span class="line">        <span class="comment">//原数组</span></span><br><span class="line">        <span class="type">int</span>[][] arr = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">11</span>][<span class="number">11</span>];  <span class="comment">//初始化数组</span></span><br><span class="line">        arr[<span class="number">1</span>][<span class="number">2</span>] = <span class="number">3</span>;  <span class="comment">//定义非零元素</span></span><br><span class="line">        arr[<span class="number">1</span>][<span class="number">3</span>] = <span class="number">2</span>;</span><br><span class="line">        arrString(arr);</span><br><span class="line">        <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">11</span>; i++) &#123;  <span class="comment">//获取有效值sum</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; <span class="number">11</span>; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr[i][j]!=<span class="number">0</span>)&#123;</span><br><span class="line">                    sum++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;有效值个数为：&quot;</span>+sum);</span><br><span class="line">        <span class="comment">//原数组转化为稀疏数组</span></span><br><span class="line">        <span class="type">int</span>[][] arr1 =<span class="keyword">new</span> <span class="title class_">int</span>[sum+<span class="number">1</span>][<span class="number">3</span>]; <span class="comment">//sum+1包括了稀疏数组头部存入原数组行、列、有效值个数这一行</span></span><br><span class="line">        arr1[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">11</span>;</span><br><span class="line">        arr1[<span class="number">0</span>][<span class="number">1</span>] = <span class="number">11</span>;</span><br><span class="line">        arr1[<span class="number">0</span>][<span class="number">2</span>] = sum;</span><br><span class="line">        <span class="type">int</span> <span class="variable">cont</span> <span class="operator">=</span> <span class="number">0</span>;   <span class="comment">//记录arr1数组的行数</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length-<span class="number">1</span>; i++) &#123;  <span class="comment">//获取有效值sum</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; arr[i].length-<span class="number">1</span>; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr[i][j]!=<span class="number">0</span>)&#123;</span><br><span class="line">                    cont++;</span><br><span class="line">                    arr1[cont][<span class="number">0</span>] = i;     <span class="comment">//行</span></span><br><span class="line">                    arr1[cont][<span class="number">1</span>] = j;     <span class="comment">//列</span></span><br><span class="line">                    arr1[cont][<span class="number">2</span>] = arr[i][j];     <span class="comment">//值</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        arrString(arr1);    <span class="comment">//输出稀疏数组</span></span><br><span class="line">        <span class="comment">//稀疏数组转化为原数组</span></span><br><span class="line">        <span class="type">int</span>[][] arr2 = <span class="keyword">new</span> <span class="title class_">int</span>[arr1[<span class="number">0</span>][<span class="number">0</span>]][arr1[<span class="number">0</span>][<span class="number">1</span>]];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>;i &lt; arr1.length;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; arr1[i].length; j++) &#123;</span><br><span class="line">                arr2[arr1[i][<span class="number">0</span>]][arr1[i][<span class="number">1</span>]] = arr1[i][<span class="number">2</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        arrString(arr2);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">arrString</span><span class="params">(<span class="type">int</span>[][] a)</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; a.length; i++) &#123;  <span class="comment">//输出二维数组</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; a[i].length; j++) &#123;</span><br><span class="line">                System.out.print(a[i][j]+<span class="string">&quot;\t&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(<span class="string">&quot;&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/02/24/blog11/" data-id="cl03jb2dr0000ww9ub02141cf" data-title="数组、排序" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/02/18/blog10/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">方法</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/02/24/blog11/">数组、排序</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/18/blog10/">方法</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/18/blog9/">blog9</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/18/blog8/">包、JavaDoc</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/17/blog7/">运算符</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

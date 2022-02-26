@@ -71,6 +71,63 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-blog11" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/24/blog11/" class="article-date">
+  <time class="dt-published" datetime="2022-02-24T06:31:19.000Z" itemprop="datePublished">2022-02-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/02/24/blog11/">数组、排序</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><ul>
+<li>首先要声明变量<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dataType[]    arrayRefVar[];<span class="comment">//首选方法</span></span><br><span class="line">dataType arrayRefVar[];<span class="comment">//效果相同，不是首选</span></span><br></pre></td></tr></table></figure></li>
+<li>Java啊需要new操作符来创建数组<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataType[]    arrayRefVar[] = <span class="keyword">new</span> <span class="title class_">dataType</span>[arraySize];</span><br></pre></td></tr></table></figure></li>
+<li>获取数组长度：arrays.length<h1 id="内存分析"><a href="#内存分析" class="headerlink" title="内存分析"></a>内存分析</h1><img src="https://img0.baidu.com/it/u=2067067443,2244393150&fm=253&fmt=auto&app=138&f=JPG?w=1139&h=500" alt="java内存"><h1 id="三种初始化"><a href="#三种初始化" class="headerlink" title="三种初始化"></a>三种初始化</h1></li>
+<li>静态初始化<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] a = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line"><span class="type">int</span>[] aa = &#123;<span class="keyword">new</span> <span class="title class_">int</span>(<span class="number">1</span>,<span class="number">1</span>),<span class="keyword">new</span> <span class="title class_">int</span>(<span class="number">2</span>,<span class="number">2</span>)&#125;;</span><br></pre></td></tr></table></figure></li>
+<li>动态初始化<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] a = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">2</span>];</span><br><span class="line">a[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">a[<span class="number">1</span>] = <span class="number">0</span>;</span><br></pre></td></tr></table></figure></li>
+<li>默认初始化(包含于动态初始化)<br>未被赋值的会有各类型的初始值</li>
+</ul>
+<ol>
+<li>数组长度固定，创建后大小不可改变。</li>
+<li>数组内元素必须是相同类型</li>
+<li>数组中元素可以是基本类型或引用类型</li>
+<li>数组可以是对象，数组内每个元素是该对象的成员变量。</li>
+<li>数组元素存放在堆中<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] arr = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">9</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">        <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length; i++) &#123;<span class="comment">//输出数组元素</span></span><br><span class="line">            System.out.println(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">		<span class="comment">//for(int aa:arr[])&#123;   增强for遍历数组</span></span><br><span class="line">        <span class="comment">//  System.out.println(aa);  </span></span><br><span class="line">        <span class="comment">// &#125;</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i &lt; arr.length; i++)&#123; <span class="comment">//输出最大值</span></span><br><span class="line">            <span class="keyword">if</span> (arr[i]&gt;a)&#123;</span><br><span class="line">                a = arr[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;最大值为：&quot;</span>+a);</span><br></pre></td></tr></table></figure>
+<h1 id="Arrays类"><a href="#Arrays类" class="headerlink" title="Arrays类"></a>Arrays类</h1>
+        
+          <p class="article-more-link">
+            <a href="/2022/02/24/blog11/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/02/24/blog11/" data-id="cl03jb2dr0000ww9ub02141cf" data-title="数组、排序" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-blog10" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/02/18/blog10/" class="article-date">
@@ -156,25 +213,13 @@
 </ul>
 </li>
 <li><strong>nextInt()</strong>:<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        System.out.println(<span class="string">&quot;输入整数：&quot;</span>);</span><br><span class="line">        <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (scanner.hasNextInt())&#123;</span><br><span class="line">            a = scanner.nextInt();<span class="comment">//获取整数</span></span><br><span class="line">            System.out.println(<span class="string">&quot;整数为：&quot;</span>+a);</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;非整数&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        scanner.close();</span><br></pre></td></tr></table></figure>
-<h1 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h1></li>
-<li><strong>swich()</strong>;<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;梅&quot;</span>;</span><br><span class="line">        <span class="keyword">switch</span> (name)&#123;<span class="comment">//jdk 7 以后switch表达式结果可以用String类型。</span></span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;mei&quot;</span>:</span><br><span class="line">                System.out.println(<span class="string">&quot;拼音&quot;</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;梅&quot;</span>:</span><br><span class="line">                System.out.println(<span class="string">&quot;汉字&quot;</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:<span class="comment">//默认</span></span><br><span class="line">                System.out.println(<span class="string">&quot;end&quot;</span>);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></li>
-<li><strong>while()</strong>;<ul>
-<li>不满足条件，直接退出循环。</li>
-</ul>
-</li>
-<li><strong>do。。。while()</strong>;<ul>
-<li>至少会执行一次。</li>
-</ul>
-</li>
-<li><strong>for()</strong>:<ul>
-<li>最灵活的、最有效的循环结构。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//输出0-100的奇数和、偶数和</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">ji</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">ou</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i % <span class="number">2</span> == <span class="number">0</span>)&#123;</span><br><span class="line">                ou+=i;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                ji+=i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;偶数h和等于：&quot;</span>+ou+<span class="string">&quot;\n奇数和等于：&quot;</span>+ji);</span><br><span class="line">		</span><br><span class="line"><span class="comment">//输出1-1000能被5整除的数、每行三个</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">geshu</span> <span class="operator">=</span> <span class="number">3</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">1000</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i%<span class="number">5</span>==<span class="number">0</span>)&#123;</span><br><span class="line">                System.out.print(i+<span class="string">&quot;\t&quot;</span>);</span><br><span class="line">                geshu++;</span><br><span class="line">                <span class="keyword">if</span> (geshu%<span class="number">3</span>==<span class="number">0</span>)&#123;</span><br><span class="line">                    System.out.println(<span class="string">&quot;&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出乘法口诀表</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">1</span>;i &lt;= <span class="number">9</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span> (j = <span class="number">1</span>;j &lt;= i;j++)&#123;</span><br><span class="line">                System.out.print(i+<span class="string">&quot;x&quot;</span>+j+<span class="string">&quot;=&quot;</span>+i*j+<span class="string">&quot; &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(<span class="string">&quot;&quot;</span>);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><strong>增强for(声明语句:表达式)</strong>;<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//加强for循环</span></span><br><span class="line">        <span class="type">int</span>[] a = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> x:a)&#123;</span><br><span class="line">            System.out.print(x);<span class="comment">//输出:1 2 3 4 5</span></span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></li>
-<li><strong>break</strong> 强制终止当前循环，不执行循环剩余语句</li>
-<li><strong>continue</strong> 跳过本次循环，进入下一次循环<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//打印三角形</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt;= <span class="number">5</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">5</span>; j &gt;= i; j--)&#123;<span class="comment">//打印空白三角形</span></span><br><span class="line">                System.out.print(<span class="string">&quot; &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">1</span>; j &lt;= i; j++)&#123;<span class="comment">//打印左半边阴影三角形</span></span><br><span class="line">                System.out.print(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">2</span>; j &lt;= i; j++)&#123;<span class="comment">//打印右半边阴影三角形</span></span><br><span class="line">                System.out.print(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"><span class="comment">//     * </span></span><br><span class="line"><span class="comment">//    *** </span></span><br><span class="line"><span class="comment">//   ***** </span></span><br><span class="line"><span class="comment">//  ******* </span></span><br><span class="line"><span class="comment">// ********* </span></span><br></pre></td></tr></table></figure></li>
-</ul>
-
+<h1 id="流程控制的方法"><a href="#流程控制的方法" class="headerlink" title="流程控制的方法"></a>流程控制的方法</h1></li>
+<li><strong>swich()</strong>;
+        
+          <p class="article-more-link">
+            <a href="/2022/02/18/blog9/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
@@ -600,45 +645,6 @@
 
 
   
-    <article id="post-first-blog" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/02/10/first-blog/" class="article-date">
-  <time class="dt-published" datetime="2022-02-10T06:38:22.000Z" itemprop="datePublished">2022-02-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/02/10/first-blog/">first blog</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>&#x3D;&#x3D;第一篇博客，这是测试内容。 #E91E63&#x3D;&#x3D;</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/10/first-blog/" data-id="ckzjhme2j0002e89u0jsycswc" data-title="first blog" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -675,6 +681,10 @@
       <ul>
         
           <li>
+            <a href="/2022/02/24/blog11/">数组、排序</a>
+          </li>
+        
+          <li>
             <a href="/2022/02/18/blog10/">方法</a>
           </li>
         
@@ -688,10 +698,6 @@
         
           <li>
             <a href="/2022/02/17/blog7/">运算符</a>
-          </li>
-        
-          <li>
-            <a href="/2022/02/17/blog6/">blog6</a>
           </li>
         
       </ul>
