@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>对象、方法(下) | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="封装继承多态封装属性私有，getset作用：1.提高程序安全性，保护数据2.影藏代码的实现细节3.统一接口4.系统可维护性增加了 1234567891011121314151617181920public class Demo5 &amp;#123;    &#x2F;&#x2F;封装    private String name;&#x2F;&#x2F;私有    private int id;    private char sex;&#x2F;&#x2F;a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="对象、方法(下)">
+<meta property="og:url" content="http://example.com/2022/03/03/blog13/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="封装继承多态封装属性私有，getset作用：1.提高程序安全性，保护数据2.影藏代码的实现细节3.统一接口4.系统可维护性增加了 1234567891011121314151617181920public class Demo5 &amp;#123;    &#x2F;&#x2F;封装    private String name;&#x2F;&#x2F;私有    private int id;    private char sex;&#x2F;&#x2F;a">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-03-03T06:43:54.000Z">
+<meta property="article:modified_time" content="2022-03-03T08:57:38.824Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-blog13" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/03/03/blog13/" class="article-date">
+  <time class="dt-published" datetime="2022-03-03T06:43:54.000Z" itemprop="datePublished">2022-03-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      对象、方法(下)
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="封装继承多态"><a href="#封装继承多态" class="headerlink" title="封装继承多态"></a>封装继承多态</h1><h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><p>属性私有，getset<br>作用：<br>1.提高程序安全性，保护数据<br>2.影藏代码的实现细节<br>3.统一接口<br>4.系统可维护性增加了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo5</span> &#123;</span><br><span class="line">    <span class="comment">//封装</span></span><br><span class="line">    <span class="keyword">private</span> String name;<span class="comment">//私有</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">char</span> sex;</span><br><span class="line"><span class="comment">//alt + insert 自动生成getset方法或右键generate生成</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;<span class="comment">//获得这个数据的值</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123;<span class="comment">//给数据赋值</span></span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Demo5</span> <span class="variable">demo5</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Demo5</span>();</span><br><span class="line">        demo5.setName(<span class="string">&quot;mei&quot;</span>);</span><br><span class="line">        System.out.println(demo5.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>在类后用extends指向父类<br>注意：<br>1.子类继承父类所有方法<br>2.私有的东西无法继承</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo6</span> &#123;</span><br><span class="line">    <span class="comment">//继承</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">student1</span> <span class="variable">student1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">student1</span>();</span><br><span class="line">        student1.aa();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">techer1</span> &#123;     <span class="comment">//父类</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">aa</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;知识&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">student1</span> <span class="keyword">extends</span> <span class="title class_">techer1</span> &#123;<span class="comment">//子类</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>super.name:<ul>
+<li>指向父类的name </li>
+<li>只能出现在子类方法或者构造方法中</li>
+<li>只能在继承条件下使用</li>
+<li>super()指父类的构造方法</li>
+</ul>
+</li>
+<li>this.name:<ul>
+<li>指向当前类的name </li>
+<li>没继承也能使用</li>
+<li>this()指当前类的构造方法</li>
+<li>相同点</li>
+<li>必须在代码第一行</li>
+<li>super和this不能同时调用构造函数</li>
+</ul>
+</li>
+</ul>
+<h6 id="方法重写"><a href="#方法重写" class="headerlink" title="方法重写"></a>方法重写</h6><p>重写<strong>都是方法的重写</strong>，和属性无关<br>为什么要重写？：父类的功能不一定需要，不一定能满足</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo7</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//方法的调用只和左边类型有关</span></span><br><span class="line">        <span class="type">A</span> <span class="variable">a</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">A</span>();</span><br><span class="line">        a.test();   <span class="comment">//aaa</span></span><br><span class="line">        System.out.println(<span class="string">&quot;+++++++++++&quot;</span>);</span><br><span class="line">        <span class="type">B</span> <span class="variable">b</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">A</span>();<span class="comment">//父类的引用指向子类</span></span><br><span class="line">        b.test();   <span class="comment">//aaa  子类重写父类，调用子类</span></span><br><span class="line">        System.out.println(<span class="string">&quot;+++++++++++&quot;</span>);</span><br><span class="line">        <span class="type">C</span> <span class="variable">c</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">B</span>();</span><br><span class="line">        c.test();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">A</span> <span class="keyword">extends</span> <span class="title class_">B</span>&#123;  <span class="comment">//子类</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">test</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;aaa&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span> <span class="keyword">extends</span> <span class="title class_">C</span>&#123;            <span class="comment">//父类</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">test</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;bbb&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">C</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">test</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ccc&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>例：<br>B a &#x3D; new A();    &#x2F;&#x2F;子类重写了父类方法<br>a.test();</p>
+<p>对于test方法：</p>
+<ul>
+<li>方法有static时，是类的方法，调用左边的B类。</li>
+<li>没有static时，是对象的方法，调用右边的A类。</li>
+</ul>
+<p>所以：<br>1.只有<strong>非静态方法才是重写</strong><br>2.方法名要相同<br>3.参数列表列表相同<br>3.修饰符范围可以扩大，不能缩小public&gt;Protected&gt;Default&gt;private<br>4.抛出的异常范围可以缩小，不能扩大</p>
+<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><p>多态：父类的引用可以指向子类。即同一方法根据发送对象的不同采用多种不同的行为方式</p>
+<p>一个对象的实际类型是确定的，可以指向的引用类型不确定<br>Student s1 &#x3D; new Student();<br>Object s2 &#x3D; new Student(); </p>
+<ul>
+<li>父类只能调用自己和子类共有的方法，不能调用子类以独有的方法</li>
+<li>子类只能调用自己的和继承父类的方法</li>
+<li>多态是方法的多态</li>
+<li>父类和子类要有关系</li>
+<li>存在条件：方法有重写，继承关系，父类指向子类对象（static方法属于类，不能重写）</li>
+</ul>
+<h6 id="instanceof-判断一个对象是否有父子关系"><a href="#instanceof-判断一个对象是否有父子关系" class="headerlink" title="instanceof 判断一个对象是否有父子关系"></a>instanceof 判断一个对象是否有父子关系</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//instanceof 关键字判断父子关系</span></span><br><span class="line">        <span class="type">Object</span> <span class="variable">object</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">A</span>();</span><br><span class="line">        System.out.println(object <span class="keyword">instanceof</span> A);<span class="comment">//true</span></span><br><span class="line">        System.out.println(object <span class="keyword">instanceof</span> B);<span class="comment">//true</span></span><br><span class="line">        System.out.println(object <span class="keyword">instanceof</span> String);<span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+<h6 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h6><p>作用：方便方法的调用，可以减少重复的代码<br>1.高类型转换到低类型要强制转换(向下转型)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Object</span> <span class="variable">str</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br><span class="line">((Student)str).go();</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">student</span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">go</span><span class="params">()</span>&#123;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.子类转换父类(向上转型)，会丢失方法</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/03/03/blog13/" data-id="cl0azgwn00003g49u81p6hbri" data-title="对象、方法(下)" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/03/03/blog14/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          static
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/02/26/blog12/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">对象、方法(上)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/03/03/blog16/">异常</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/03/blog15/">抽象、接口</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/03/blog14/">static</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/03/blog13/">对象、方法(下)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/26/blog12/">对象、方法(上)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
